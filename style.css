@@ -253,11 +253,11 @@ header {
     grid-row: 1 / span 2;
     height: 125px;
     width: auto;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    border-bottom-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-bottom-right-radius: 5px;
+    -ms-border-bottom-right-radius: 5px;
+    -o-border-bottom-right-radius: 5px;
 }
 
 .name {
@@ -319,31 +319,35 @@ header {
 .name p {
     font-size: 1.5rem;
     font-family: 'Carattere', cursive;
+    color: #dcdcdc;
 }
 
 .nav-contacts {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+    height: 96%;
 }
 
 .contacts {
-    height: 45px;
+    height: 40px;
     background-color: #dcdcdc;
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-bottom-left-radius: 5rem;
+    border-bottom-left-radius: 2rem;
 }
 
 .icons {
     vertical-align: middle;
     margin: 0 1rem 0 1rem;
+    color: #ff0000;
 }
 
 .phone-number {
     font-family: 'Buenard', serif;
     font-size: large;
+    color: #007c80;
 }
 
 .nav {
@@ -361,28 +365,53 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    margin: 0 1rem 0 1rem;
+    margin: 0 0.7rem 0 0.7rem;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
     font-family: 'Buenard', serif;
-    font-size: 1.2rem;
-    font-size: 20px;
-    padding: 0.5rem 0.8rem;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    font-size: 1.4rem;
+    padding: 0.3rem 0.5rem;
+    border-top-left-radius: 15px;
+    -webkit-border-top-left-radius: 15px;
+    -moz-border-top-left-radius: 15px;
+    -ms-border-top-left-radius: 15px;
+    -o-border-top-left-radius: 15px;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+.active {
     background-color: #dcdcdc;
-    color: black;
+    color: #ff0000;
 }
 
 .social-media {
     margin-right: 1rem;
+}
+
+.social-media ul {
+    list-style-type: none;
+}
+
+.social-media ul li {
+    display: inline-block;
+    margin: 0 0.2rem 0 0.2rem;
+}
+
+.social-media ul li a {
+    font-size: 1.5rem;
+}
+
+.facebook {
+    color: #3b5998;
+}
+
+.youtube {
+    color: #ff0000;
+}
+
+.twitter {
+    color: #1da1f2;
 }
