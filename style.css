@@ -235,7 +235,7 @@
 
 header {
     background-color: #1da1f2;
-    height: 125px;
+    height: 100px;
     width: 100%;
 }
 
@@ -246,6 +246,9 @@ header {
 }
 
 .brand {
+    position: absolute;
+    top: 0;
+    left: 0;
     margin: 0;
     padding: 0;
     border: 1px solid white;
@@ -258,6 +261,7 @@ header {
     -moz-border-bottom-right-radius: 5px;
     -ms-border-bottom-right-radius: 5px;
     -o-border-bottom-right-radius: 5px;
+    z-index: 999;
 }
 
 .name {
@@ -273,6 +277,10 @@ header {
     font-family: 'Buenard', serif;
     color: white;
     text-transform: uppercase;
+    animation: bounce;
+    /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 5s;
+    /* don't forget to set a duration! */
 }
 
 .typewrite {
@@ -354,7 +362,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     height: 100%;
     width: 100%;
 }
@@ -365,14 +373,14 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    margin: 0 0.7rem 0 0.7rem;
+    margin: 0 0.3rem 0 0.3rem;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
     font-family: 'Buenard', serif;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     padding: 0.3rem 0.5rem;
     border-top-left-radius: 15px;
     -webkit-border-top-left-radius: 15px;
@@ -383,8 +391,9 @@ nav ul li a {
 
 nav ul li a:hover,
 .active {
-    background-color: #dcdcdc;
-    color: #ff0000;
+    background-color: #014d4e;
+    color: #ffffff;
+    box-shadow: 0 8px 16px 0 #008384;
 }
 
 .social-media {
@@ -413,5 +422,33 @@ nav ul li a:hover,
 }
 
 .twitter {
-    color: #1da1f2;
+    color: #3b5998;
+}
+
+
+/*---------------------Slideshow-------------*/
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 85vh;
+    background-color: #dcdcdc;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: ;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay-text {
+    position: absolute;
+    left: 40%;
+    top: 40%;
 }
