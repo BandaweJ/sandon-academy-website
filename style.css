@@ -565,6 +565,7 @@ nav {
 /* --------Past Results Cotainer---------------------- */
 
 .past-results-container {
+    margin: 3rem 0;
     display: flex;
     flex-flow: row wrap;
 }
@@ -572,12 +573,33 @@ nav {
 .side-bar {}
 
 .results {
+    padding: 1rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    overflow-x: hidden;
 }
 
 .result {
+    background-image: url('./img/student.JPG');
+    background-size: cover;
     box-shadow: 3px 3px 5px #277bc0;
-    width: 300px;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.results-summary {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.points {
+    font-weight: bold;
+    font-size: 2rem;
 }
