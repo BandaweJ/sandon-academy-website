@@ -11,7 +11,7 @@ html,
 body {
     font-family: 'Roboto', sans-serif;
     height: 100%;
-    width: 100%;
+    max-width: 1600px;
 }
 
 
@@ -531,7 +531,7 @@ nav {
 
 .remarks {
     /* padding: 3rem; */
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 300;
 }
 
@@ -739,6 +739,37 @@ footer label {
     color: white;
     grid-column: 1 / span 3;
 }
+
+
+/* Fees Page Styling */
+
+.fees-desc {
+    margin-top: 2rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.fees-desc ul {
+    margin: 1rem auto 0;
+    list-style-type: disc;
+}
+
+.fees-desc ul li {
+    margin-bottom: 1rem;
+}
+
+.fees-desc ul li:last-child {
+    margin-bottom: 0;
+}
+
+.fees-desc .warning {
+    background-color: #94bfe2;
+    margin: 1rem auto;
+    padding: 0.3rem;
+}
+
+
+/* End Fees Page Styling */
 
 
 /* End Footer */
