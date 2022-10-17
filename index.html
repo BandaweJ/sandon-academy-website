@@ -1,174 +1,506 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Sandon Academy</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Sandon Academy official website." />
     <meta name="author" content="Joseph Bandawe" />
     <link rel="stylesheet" href="./style.css" />
+    <!-- TweenMax -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <!----Font Awesome Icons-->
-    <script src="https://kit.fontawesome.com/fc8c8b3e27.js" crossorigin="anonymous"></script>
-
+    <!-- Animate from https://animate.style/ -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/fc8c8b3e27.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-
+    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia" />
 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap&effect=shadow-multiple|3d-float&text=SANDON%20ACADEMY" rel="stylesheet" />
+
+    <title>Sandon Academy</title>
 </head>
 
 <body>
-    <div class="row">
-        <header class="row">
+    <!-- Start Main -->
+    <main>
+        <!-- Start Hearder -->
+        <header>
+            <!-- Logo -->
             <img src="./img/sandon logo1 (1).png" alt="School Logo" class="logo" />
+            <!-- School name -->
             <div class="school-name">
-                <h1 class="name">SANDON ACADEMY</h1>
-                <small class="motto">We Strive For Excellence</small>
-            </div>
-            <nav>
-                <div class="contacts">
-                    <span>
+                <h1 class="name animate__animated animate__fadeInRight">
+                    SANDON ACADEMY
+                </h1>
+                <!-- Motto -->
+                <small class="motto animate__animated animate__fadeInLeft">We Strive For Excellence</small
+          >
+        </div>
+        <!-- End School Name -->
+        <!-- Navigation -->
+        <nav>
+          <!-- Start Contacts -->
+          <div class="contacts">
+            <!-- Phone Number -->
+            <span class="phone-number">
               <i class="fa-brands fa-whatsapp"></i> 0788 166 523 / 0773 603 848
               / 0773 907 325
-            </span> &nbsp;
-                    <span class="email">
-              <i class="fa-solid fa-envelope"></i>
+            </span>
+            
+            <!-- Email -->
+            <span class="email">
+              <i class="fa-regular fa-envelope"></i>
               sandonacademyinfo@gmail.com
             </span>
-                </div>
-                <div class="navigation">
-                    <ul>
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">Curriculum</a>
-                        </li>
-                        <li>
-                            <a href="#">Fees</a>
-                        </li>
-                        <li>
-                            <a href="#">Apply</a>
-                        </li>
-                        <li>
-                            <a href="#">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-
-        <!-- Slideshow container -->
-        <div class="slideshow-container row">
-            <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
-                <img src="./img/slide1.jpg" style="width: 100%" />
-                <div class="text">Caption Text</div>
+          </div>
+          <!-- End Contacts -->
+          <!-- Start Nav Buttons -->
+          <div class="navigation">
+            <ul class="animate__animated animate__bounce">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Curriculum</a>
+              </li>
+              <li>
+                <a href="#">Fees</a>
+              </li>
+              <li>
+                <a href="#">Apply</a>
+              </li>
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
+            </ul>
+            <div class="social-media-icons nav-socials">
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
             </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">2 / 3</div>
-                <img src="./img/slide1.jpg" style="width: 100%" />
-                <div class="text">Caption Two</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">3 / 3</div>
-                <img src="./img/slide1.jpg" style="width: 100%" />
-                <div class="text">Caption Three</div>
-            </div>
-
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br />
-
-        <!-- The dots/circles -->
-        <div style="text-align: center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="mission">
-            <h3 class="welcome">Welcome to Sandon Academy</h3>
-            <div class="welcome-underline"></div>
-        </div>
-        <div class="mission">A World Class Provider Of Holistic Education</div>
-        <hr class="seperator" />
-        <div class="values">
-            Godliness. Empathy. Trustworthy. Integrity. Excellence
-        </div>
-        <div class="remarks-container row">
-            <div class="pricipal-pic col-md-4">
-                <img src="" alt="Principal's Pic" />
-            </div>
-            <div class="remarks col-md-8">
-                <h3>Pricipal's Welcome Remarks</h3>
-                <p>
-                    It is my pleasure to welcome you to Sandon Academy. I hope that you find our site informative and that it answers questions that you might have.
-                </p>
-                <p>
-                    The school is a growing modern private boarding school with high expectations from staff and students. Sandon is a world class provider of sustainable education.
-                </p>
-                <p>
-                    We strive to produce all round individuals who are capable of standing independently and who are able to deal with global challenges.
-                </p>
-
-                <p>
-                    We offer high quality education with a wide range of co-curricular activities. Sandon Academy values the input from parents and stakeholders and we believe that a strong relationship between the school, home and the student is more likely to bring positive
-                    results.
-                </p>
-                <p>
-                    Our superb facilities and dedicated staff enables us to deliver our work in an environment that is intimate, friendly and attuned to every specific educational need.
-                </p>
-
-                <p>
-                    Our website is only a glimpse of what makes Sandon Academy distinctive. I look forward to welcoming you to our school.
-                </p>
-                <p>You are welcome.</p>
-                <p>
-                    <q>We strive for excellence</q>
-                </p>
-                <p>Dr. T. Mupundu ( Principal)</p>
-            </div>
-        </div>
-        <div class="vision-container row">
-            <div class="mission">
-                <h3 class="vision">Our Mission</h3>
-                <div class="welcome-underline"></div>
-                <div class="vision">
-                    To provide personalised holistic education that addresses learners' unique needs, cultivating independent thinking, that enables them to contribute to their communities in meaningful ways and succeed in the challenging world we live in.
-                </div>
-            </div>
-        </div>
-        <div class="past-results-container row">
-            <div class="side-bar col-md-2"></div>
-            <div class="results col-md-10">
-                <div class="result">
-                    <div class="results-summary">
-                        <h2>Mhlanga Lyton</h2>
-                        <p class="points">29 Points</p>
-                        <p class="subjects"></p>
+          </div>
+          <!-- End Nav Buttons -->
+        </nav>
+      </header>
+      <!-- End Header -->
+      <!-- Slideshow -->
+      <article>
+        <div class="slideshow">
+          <div class="slideshow-inner">
+            <div class="slides">
+              <div class="slide is-active">
+                <div class="slide-content">
+                  <div class="caption">
+                    <div class="title">100% PASS RATE</div>
+                    <div class="text">
+                      <p>WE GUARANTEE THAT YOUR CHILD WILL PASS</p>
                     </div>
+                    <a href="#" class="btn">
+                      <span class="btn-inner">APPLY ONLINE</span>
+                    </a>
+                  </div>
                 </div>
+                <div class="image-container">
+                  <img src="./img/slide1.JPG" alt="" class="image" />
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide-content">
+                  <div class="caption">
+                    <div class="title">EXCELLENT CURRICULUM</div>
+                    <div class="text">
+                      <p>WE OFFER A WIDE RANGE OF SUBJECTS</p>
+                    </div>
+                    <a href="#" class="btn">
+                      <span class="btn-inner">VIEW OUR CURRICULUM</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="image-container">
+                  <img src="./img/slide5.JPG" alt="" class="image" />
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide-content">
+                  <div class="caption">
+                    <div class="title">AFFORDABLE FEES</div>
+                    <div class="text">
+                      <p>OUR FEES ARE RELATIVELY LOW</p>
+                    </div>
+                    <a href="#" class="btn">
+                      <span class="btn-inner">CHECK OUR FEES</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="image-container">
+                  <img src="./img/slide3.JPG" alt="" class="image" />
+                </div>
+              </div>
+              <div class="slide">
+                <div class="slide-content">
+                  <div class="caption">
+                    <div class="title">WE ARE THE BEST</div>
+                    <div class="text">
+                      <p>DO YOU WANT YOUR CHILD TO ATTEND THE BEST SCHOOL?</p>
+                    </div>
+                    <a href="#" class="btn">
+                      <span class="btn-inner">CONTACT US</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="image-container">
+                  <img src="./img/slide4.JPG" alt="" class="image" />
+                </div>
+              </div>
             </div>
+            <div class="pagination">
+              <div class="item is-active">
+                <span class="icon">1</span>
+              </div>
+              <div class="item">
+                <span class="icon">2</span>
+              </div>
+              <div class="item">
+                <span class="icon">3</span>
+              </div>
+              <div class="item">
+                <span class="icon">4</span>
+              </div>
+            </div>
+            <div class="arrows">
+              <div class="arrow prev">
+                <span class="svg svg-arrow-left">
+                  <svg
+                    version="1.1"
+                    id="svg4-Layer_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    width="14px"
+                    height="26px"
+                    viewBox="0 0 14 26"
+                    enable-background="new 0 0 14 26"
+                    xml:space="preserve"
+                  >
+                    <path
+                      d="M13,26c-0.256,0-0.512-0.098-0.707-0.293l-12-12c-0.391-0.391-0.391-1.023,0-1.414l12-12c0.391-0.391,1.023-0.391,1.414,0s0.391,1.023,0,1.414L2.414,13l11.293,11.293c0.391,0.391,0.391,1.023,0,1.414C13.512,25.902,13.256,26,13,26z"
+                    />
+                  </svg>
+                  <span class="alt sr-only"></span>
+                </span>
+              </div>
+              <div class="arrow next">
+                <span class="svg svg-arrow-right">
+                  <svg
+                    version="1.1"
+                    id="svg5-Layer_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    width="14px"
+                    height="26px"
+                    viewBox="0 0 14 26"
+                    enable-background="new 0 0 14 26"
+                    xml:space="preserve"
+                  >
+                    <path
+                      d="M1,0c0.256,0,0.512,0.098,0.707,0.293l12,12c0.391,0.391,0.391,1.023,0,1.414l-12,12c-0.391,0.391-1.023,0.391-1.414,0s-0.391-1.023,0-1.414L11.586,13L0.293,1.707c-0.391-0.391-0.391-1.023,0-1.414C0.488,0.098,0.744,0,1,0z"
+                    />
+                  </svg>
+                  <span class="alt sr-only"></span>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </article>
+      <!-- End Slideshow -->
+    </main>
+    <!-- End Main -->
+    <!-- Welcome Note & Introduction -->
+    <section>
+      <!-- h3 heading -->
+      <h3 class="welcome animate__animated animate__zoomInDown">
+        Welcome to Sandon Academy
+      </h3>
+      <!--  Underline for the welcome heading  -->
+      <div class="welcome-underline"></div>
+      <!-- mission statement  -->
+      <div class="mission">A World Class Provider Of Holistic Education</div>
+      <!-- Seperator -->
+      <hr class="seperator" />
+      <!-- Values -->
+      <div class="values">
+        <span class="values-background"
+          >Godliness. Empathy. Trustworthy. Integrity. Excellence</span
+        >
+      </div>
 
-    <footer></footer>
+      <!-- Welcome Remarks -->
+      <article class="remarks-container">
+        <!-- Principal's pic -->
+        <img src="./img/doc.JPG" class="principal-pic" alt="Principal's Pic" />
+        <!-- Remarks -->
+        <div class="remarks">
+          <h4>Pricipal's Welcome Remarks</h4>
+          <p>
+            It is my pleasure to welcome you to Sandon Academy. I hope that you
+            find our site informative and that it answers questions that you
+            might have.
+          </p>
+          <p>
+            The school is a growing modern private boarding school with high
+            expectations from staff and students. Sandon is a world class
+            provider of sustainable education.
+          </p>
+          <p>
+            We strive to produce all round individuals who are capable of
+            standing independently and who are able to deal with global
+            challenges.
+          </p>
+
+          <p>
+            We offer high quality education with a wide range of co-curricular
+            activities. Sandon Academy values the input from parents and
+            stakeholders and we believe that a strong relationship between the
+            school, home and the student is more likely to bring positive
+            results.
+          </p>
+          <p>
+            Our superb facilities and dedicated staff enables us to deliver our
+            work in an environment that is intimate, friendly and attuned to
+            every specific educational need.
+          </p>
+
+          <p>
+            Our website is only a glimpse of what makes Sandon Academy
+            distinctive. I look forward to welcoming you to our school.
+          </p>
+          <p>You are welcome.</p>
+          <p>
+            <q>We strive for excellence</q>
+          </p>
+          <p>Dr. T. Mupundu ( Principal)</p>
+        </div>
+      </article>
+    </section>
+    <!-- End Welcome Note & Introduction -->
+
+    <!-- Vision -->
+    <section class="vision-container">
+      <h3 class="welcome">Our Mission</h3>
+      <div class="welcome-underline"></div>
+      <div class="mission-white">
+        To provide personalised holistic education that addresses learners'
+        unique needs, cultivating independent thinking, that enables them to
+        contribute to their communities in meaningful ways and succeed in the
+        challenging world we live in.
+      </div>
+    </section>
+
+    <!-- End Vision -->
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+      <div class="why-us-heading">
+        <h3 class="welcome">Why Choose Us?</h3>
+        <div class="welcome-underline"></div>
+      </div>
+      <!-- Smartboards -->
+      <div class="point">
+        <h4 class="point-heading">Smart Boards</h4>
+        <p class="point-summary">
+          We are always abreast with technological advancements. All our classes
+          are equipped with interactive smartboards. These make learning easy,
+          interactive, clean and enjoyable. These boards are also connected to
+          the internet for easy and quick lookup of information and diagrams.
+          The learning environment we provide is unparralled in Zimbabwe.
+        </p>
+      </div>
+      <!-- Solar Powered -->
+      <div class="point">
+        <h4 class="point-heading">Solar Powered</h4>
+        <p class="point-summary">
+          Learning at Sandon is not interupted by power supplies. The whole
+          institution from classes to hostels is powered by solar panels which
+          supply electricity whenever there is disruption to the national power
+          supply. Our students are able to perfom their experiments and partake
+          in their studies without interruptions.
+        </p>
+      </div>
+      <!-- Excellent Menu -->
+      <div class="point">
+        <h4 class="point-heading">Excellent Menu</h4>
+        <p class="point-summary">
+          We employ fully qualified and experienced Chefs who prepare world
+          class dishes for our students. We also offer a wide variety of dishes
+          and options. This makes our menus excellent and world class. our
+          students always enjoy those excellent meals in the comfort of our
+          spacious dining hall.
+        </p>
+      </div>
+      <!-- Excellent Results -->
+      <div class="point">
+        <h4 class="point-heading">Excellent Results</h4>
+        <p class="point-summary">
+          Sandon Academy has been consistantly producing top results for both A
+          and O level Cambridge Syllabi. Our passrate is always around and near
+          the 100% mark. We have also managed to produce some of the highest
+          points at A level in the country. Our current record is at 29 Points
+          in Science subjects.
+        </p>
+      </div>
+      <!-- Cambridge Syllabi -->
+      <div class="point">
+        <h4 class="point-heading">Cambridge Syllabi</h4>
+        <p class="point-summary">
+          We offer Cambridge International Syllabi at both O and A Levels whose
+          results are internationally recognised. Our students have no problems
+          when applying to varius institutions of higher learning. New students
+          coming from other schools can also easily fit in our ecosystem.
+        </p>
+      </div>
+      <!-- Highly Qualified Teachers -->
+      <div class="point">
+        <h4 class="point-heading">Highly Qualified Teachers</h4>
+        <p class="point-summary">
+          We employ highly qualified and experienced teachers. These are well
+          trained, well paid, dedicated, hardworking and mature individuals who
+          work around the clock to ensure the success of our students. These
+          teachers have been producing excellent results for years.
+        </p>
+      </div>
+      <!-- Teacher pupil Ratio -->
+      <div class="point">
+        <h4 class="point-heading">1 : 20 Teacher pupil ratio</h4>
+        <p class="point-summary">
+          Our classes are small and mangeable. Each class has a maximum of 20
+          students. Teachers can efficiently deliver content to students and
+          monitor their perfomance and progress and make informed decisions on
+          how to help each individual student.
+        </p>
+      </div>
+      <!-- 24 / 7 Internet -->
+      <div class="point">
+        <h4 class="point-heading">24/7 Internet</h4>
+        <p class="point-summary">
+          We have high speed fiber internet that is available 24 / 7 throughoutt
+          the whole term. It helps students and teachers to conduct research at
+          any given time. It also enables them to download useful supplementary
+          study materials such as videos, journals and textbooks.
+        </p>
+      </div>
+    </section>
+
+    <!-- End Why Choose Us -->
+
+    <!-- Testimonials -->
+    <!-- <section class="testimonials">
+      <h3 class="welcome">What people are saying</h3>
+      <div class="welcome-underline"></div>
+      <div class="testimonials">
+        <div class="testimonial-container">
+          <img src="#" alt="" />
+          <blockquote class="summary"></blockquote>
+          <p class="name"></p>
+        </div>
+        <div class="testimonial-container">
+          <img src="#" alt="" />
+          <blockquote class="summary"></blockquote>
+          <p class="name"></p>
+        </div>
+        <div class="testimonial-container">
+          <img src="#" alt="" />
+          <blockquote class="summary"></blockquote>
+          <p class="name"></p>
+        </div>
+        <div class="testimonial-container">
+          <img src="#" alt="" />
+          <blockquote class="summary"></blockquote>
+          <p class="name"></p>
+        </div>
+      </div>
+    </section> -->
+    <!-- End Testimonials -->
+
+    <!-- Footer -->
+
+    <footer>
+      <div class="contact-form">
+        <h3>Contact Us</h3>
+        <div class="contact-form-details">
+          <label>Name</label>
+          <input type="text" name="name" id="name" />
+          <label>Email</label>
+          <input type="text" name="email" id="email" />
+          <label>Message</label>
+          <textarea
+            name="msg"
+            id="msg"
+            placeholder="Type your message here"
+            cols="20"
+            rows="7"
+          ></textarea>
+          <label></label>
+          <button type="button">Send Message</button>
+        </div>
+      </div>
+      <div class="footer-contacts">
+        <h3>Contact Details</h3>
+        <div class="contact-details">
+          <label>Cell</label>
+          <p>0788 166 523 / 0773 603 848 / 0773 907 325</p>
+          <label>Email</label>
+          <p>sandonacademyinfo@gmail.com</p>
+          <label>Address</label>
+          <p>Sandon Academy <br />P. O Box 97<br />Gutu</p>
+        </div>
+        <div class="social-media-icons">
+          <a href="#" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="#" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="#" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+      
+      <div class="google-maps">
+        <h3>Our Location</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939.878599980814!2d31.082680429225025!3d-19.56245083548329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1932cd642289da79%3A0x6f70dd350ac884d9!2sSandon%20Academy!5e0!3m2!1sen!2szw!4v1580456882652!5m2!1sen!2szw"
+          frameborder="0"
+          style="border: 0"
+          class="mx-auto d-block w-100"
+        ></iframe>
+        <div class="social-media-icons">
+         
+      </div>
+      
+    </footer>
+<div class="copyright">Developed by Sandon Academy &copy; 2018</div>
+    <!-- End Footer -->
+
+    <!-- JS Script -->
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
