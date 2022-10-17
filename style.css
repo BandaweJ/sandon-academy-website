@@ -704,6 +704,11 @@ footer label {
     border: 0;
 }
 
+.tick {
+    color: white;
+    display: none;
+}
+
 .contact-form-details button:hover {
     background-color: #0f3555;
     color: white;
