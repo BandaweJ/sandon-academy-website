@@ -132,6 +132,32 @@ nav {
     display: flex;
     /* flex-flow: row wrap; */
     justify-content: space-between;
+    z-index: 999;
+}
+
+.nav-hamburger-menu {
+    /* width: 100%; */
+    width: 100%;
+    display: none;
+}
+
+.nav-hamburger-menu button {
+    padding: 0.2rem 0.4rem;
+    background-color: #277bc0;
+    border: 0;
+    color: white;
+    font-size: x-large;
+}
+
+.nav-hamburger-menu li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-hamburger-menu button:hover {
+    background-color: #0f3555;
+    box-shadow: 0 0 3px #777;
 }
 
 .social-media-icons {
@@ -150,16 +176,19 @@ nav {
     color: #777;
 }
 
-.navigation ul {
+.navigation ul,
+.nav-hamburger-menu ul {
     list-style-type: none;
 }
 
-.navigation ul li {
+.navigation ul li,
+.nav-hamburger-menu ul li {
     display: inline-block;
     margin-right: 0.5rem;
 }
 
-.navigation ul li a {
+.navigation ul li a,
+.nav-hamburger-menu ul li a {
     text-decoration: none;
     font-size: 1.2rem;
     color: white;
@@ -170,7 +199,8 @@ nav {
 }
 
 .navigation ul li a:hover,
-.selected {
+.nav-hamburger-menu ul li a:hover,
+.nav-hamburger-menu ul li button:hover .selected {
     background-color: #e2e9f0;
     color: rgb(17, 13, 13);
     transform: scale(1.2);
@@ -463,7 +493,7 @@ nav {
 /* Underline for the welcome heading */
 
 .welcome-underline {
-    width: 25rem;
+    width: 30%;
     height: 0.8rem;
     background-color: #277bc0;
     transform: skewX(-50deg);
@@ -608,7 +638,7 @@ nav {
 .why-us-heading {
     grid-column: 1 / 5;
     grid-row: 1;
-    justify-self: center;
+    justify-self: stretch;
     align-self: start;
 }
 
@@ -654,7 +684,7 @@ footer {
     gap: 1rem;
     margin-top: 3rem;
     background-color: #aaa;
-    padding-bottom: 2rem;
+    padding-bottom: 0 0 2rem 0;
 }
 
 .footer-contacts {
@@ -664,7 +694,7 @@ footer {
 
 .contact-details {
     display: grid;
-    grid-template-columns: 20% auto;
+    grid-template-columns: 15% auto;
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
@@ -676,38 +706,46 @@ footer label {
 .contact-form {
     display: flex;
     flex-direction: column;
+    padding: 0.1rem;
 }
 
 .contact-form-details {
     display: grid;
-    grid-template-columns: 20% auto;
+    grid-template-columns: 15% auto;
     gap: 1rem;
 }
 
+.contact-form form {
+    margin-bottom: 1rem;
+}
+
 .contact-form-details input,
-.contact-form-details textarea {
+.contact-form-details textarea,
+.contact-form-details button {
     /* justify-self: start; */
     border-bottom: 1px solid #277bc0;
     border-top: 0;
     border-left: 0;
     border-right: 0;
     border-radius: 0.3rem;
-    height: 1.7rem;
+    /* height: 1.7rem; */
+    width: 100%;
+    padding: 0.2em;
+    border: none;
+    font: 300 100%/1.2 Ubuntu, sans-serif;
+    cursor: grab;
+    font-size: large;
 }
 
-.contact-form-details button {
+
+/* .contact-form-details button {
     padding: 1rem;
     background-color: #277bc0;
     border-radius: 0.5rem;
     cursor: grab;
     font-size: larger;
     border: 0;
-}
-
-.tick {
-    color: white;
-    display: none;
-}
+} */
 
 .contact-form-details button:hover {
     background-color: #0f3555;
@@ -732,6 +770,13 @@ footer label {
     margin: 2rem auto;
 }
 
+.google-maps iframe {
+    border: 0;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+}
+
 .copyright {
     text-align: center;
     padding: 1rem;
@@ -741,7 +786,15 @@ footer label {
 }
 
 
+/* End Footer */
+
+
 /* Fees Page Styling */
+
+.fees {
+    width: 80%;
+    margin: auto;
+}
 
 .fees-desc {
     margin-top: 2rem;
@@ -752,6 +805,7 @@ footer label {
 .fees-desc ul {
     margin: 1rem auto 0;
     list-style-type: disc;
+    padding-left: 2rem;
 }
 
 .fees-desc ul li {
@@ -772,38 +826,183 @@ footer label {
 /* End Fees Page Styling */
 
 
-/* End Footer */
+/* Curriculum Page Styling */
+
+.curriculum {
+    width: 80%;
+    display: block;
+    margin: 3rem auto 0;
+}
+
+.curriculum h3 {
+    text-align: center;
+    font-size: xx-large;
+    opacity: 0.8;
+    text-decoration: underline;
+    color: #333;
+}
+
+.curriculum h4 {
+    text-align: center;
+    font-size: x-large;
+    margin: 1rem 0;
+    color: #333;
+    opacity: 0.8;
+}
+
+.curriculum p,
+.curriculum ul {
+    margin: 1rem 0;
+    opacity: 0.8;
+}
+
+.curriculum ul {
+    padding-left: 2rem;
+}
+
+.curriculum ul li {
+    padding: 0.3rem 0;
+}
+
+.curriculum table {
+    width: 100%;
+}
+
+.curriculum table thead {
+    color: #277bc0;
+}
+
+.curriculum th,
+.curriculum td {
+    width: 50%;
+    /* border-collapse: collapse; */
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.curriculum table thead,
+.curriculum table tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+
+/* End Curriculum Page Styling */
+
+
+/* Start Contact Page Styling */
+
+.contact-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+}
+
+.contact-page h3 {
+    font-size: xx-large;
+    opacity: 0.8;
+    text-align: center;
+    color: #333;
+    margin: 3rem auto 1rem;
+}
+
+
+/* End Start Contact Page Styling */
+
+
+/* Start Application Form */
+
+.application-form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.application-form h3 {
+    margin: 3rem auto 1rem;
+    font-size: x-large;
+    color: #333;
+    text-align: center;
+}
+
+.application-form p {
+    margin: 0.3rem 0;
+    color: #4981b3;
+}
+
+.application-form fieldset {
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 3px #777;
+    /* color: #277bc0; */
+}
+
+.application-form .personal-details,
+.application-form .contact-details,
+.application-form .academic-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#idnumber {
+    grid-column: 1 / 3;
+    width: 50%;
+}
+
+.application-form .form-group {
+    display: grid;
+    grid-template-columns: 30% auto;
+    margin: 0.5rem 1rem;
+    /* justify-items: start; */
+}
+
+.form-group input,
+.form-group select {
+    padding: 0.2em;
+    font-size: medium;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+.application-form button {
+    padding: 0.3em 0.5em;
+    background-color: #4981b3;
+    font-size: large;
+    border: 0;
+    border-radius: 0.2em;
+    margin: 0 auto;
+    color: white;
+}
+
+.application-form button:hover {
+    background-color: #0f3555;
+    box-shadow: 0 0 5px #aaa;
+}
+
+
+/* End Start Application Form */
 
 
 /* Media Queries */
 
 
-/* Small Devices */
+/* Large devices (desktops, between 992 and 1200px) */
 
-@media (max-width: 575.98px) {
+@media screen and (max-width: 1200px) {
     header {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 9% 41% 50%;
     }
-    .logo {
-        display: none;
+    .email {
+        margin-left: 0;
     }
-    .contacts {
-        display: none;
-    }
-    .school-name {
-        justify-content: center;
-    }
-    .name {
-        font-size: 2.1rem;
-        text-align: center;
-    }
-    .nav-socials {
-        display: none;
+    .phone-number,
+    .email {
+        font-size: 1rem;
     }
     .navigation {
-        margin-top: 0.2rem;
-        justify-content: center;
+        margin-top: 1.2rem;
     }
     .navigation ul li {
         margin-right: 0.1rem;
@@ -812,112 +1011,19 @@ footer label {
         font-size: 1.1rem;
         padding: 0.2rem 0.3rem;
     }
-    .motto {
-        font-size: 0.8rem;
-    }
-    .slideshow .slide .title {
-        font-size: 1.5rem;
-    }
-    .remarks-container {
-        display: flex;
-        flex-direction: column;
-    }
-    .remarks h4 {
-        text-align: center;
-        margin-top: 2rem;
-    }
-    .why-us {
-        grid-template-columns: 1fr;
-    }
-    .why-us-heading {
-        grid-column: 1 / span 1;
-    }
-    footer {
-        grid-template-columns: 1fr;
-        padding-bottom: 0;
-    }
-    .contact-form-details button {
-        padding: 0.3rem;
-    }
-    .google-maps iframe {
-        margin-bottom: 0;
-    }
-}
-
-
-/* Small devices (landscape phones, less than 768px) */
-
-@media screen and (min-width: 575.98px) and (max-width: 767.98px) {
-    header {
-        display: flex;
-        flex-direction: column;
-    }
-    .logo {
-        display: none;
-    }
-    .contacts {
-        display: none;
-    }
-    .school-name {
-        justify-content: center;
-    }
-    .name {
-        font-size: 2.1rem;
-        text-align: center;
-    }
     .nav-socials {
         display: none;
     }
-    .navigation {
-        margin-top: 0.2rem;
-        justify-content: center;
-    }
-    .navigation ul li {
-        margin-right: 0.1rem;
-    }
-    .navigation ul li a {
-        font-size: 1.1rem;
-        padding: 0.2rem 0.3rem;
-    }
-    .motto {
-        font-size: 0.8rem;
-    }
-    .slideshow .slide .title {
-        font-size: 1.5rem;
-    }
-    .remarks-container {
-        display: flex;
-        flex-direction: column;
-    }
-    .remarks h4 {
-        text-align: center;
-        margin-top: 2rem;
-    }
-    .why-us {
-        grid-template-columns: 1fr 1fr;
-    }
-    .why-us-heading {
-        grid-column: 1 / span 2;
-    }
-    footer {
-        grid-template-columns: 1fr 1fr;
-        padding-bottom: 0;
-    }
-    .contact-form-details button {
-        padding: 0.3rem;
-    }
-    .google-maps {
-        grid-column: 1 / span 2;
-    }
-    .google-maps iframe {
-        margin-bottom: 0;
+    .logo {
+        width: 110%;
+        height: auto;
     }
 }
 
 
 /* Medium devices (tablets, between 768 and 992px) */
 
-@media screen and (min-width: 767.98px) and (max-width: 991.98px) {
+@media screen and (max-width: 991.98px) {
     header {
         grid-template-columns: 45% 55%;
     }
@@ -948,8 +1054,120 @@ footer label {
         font-size: 1.1rem;
         padding: 0.2rem 0.3rem;
     }
+    /* Slideshow */
     .slideshow .slide .title {
+        font-size: 28px;
+    }
+    .slideshow .slide .text {
+        font-size: 16px;
+    }
+    /* Welcome Remarks */
+    .welcome {
         font-size: 1.5rem;
+    }
+    .welcome-underline {
+        width: 30%;
+        height: 0.5rem;
+    }
+    .mission {
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+    }
+    .values {
+        font-size: 1rem;
+    }
+    .remarks {
+        font-size: 1rem;
+    }
+    /* Why Us */
+    .why-us {
+        grid-template-columns: 1fr 1fr;
+    }
+    .why-us-heading {
+        grid-column: 1 / span 2;
+    }
+    /* Footer */
+    footer {
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 0;
+    }
+    .contact-form-details button {
+        padding: 0.3rem;
+    }
+    .google-maps {
+        grid-column: 1 / span 2;
+    }
+    .google-maps iframe {
+        margin-bottom: 0;
+    }
+    /* Contact Page  */
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .contact-page .fb-page {
+        width: 991px;
+    }
+}
+
+
+/* Small devices (landscape phones, less than 768px) */
+
+@media screen and (max-width: 767.98px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    .logo {
+        display: none;
+    }
+    .contacts {
+        display: none;
+    }
+    .school-name {
+        justify-content: center;
+    }
+    .name {
+        font-size: 2.1rem;
+        text-align: center;
+    }
+    .nav-socials {
+        display: none;
+    }
+    .navigation {
+        margin-top: 0.2rem;
+        justify-content: center;
+    }
+    .navigation ul li {
+        margin-right: 0.1rem;
+    }
+    .navigation ul li a {
+        font-size: 1.1rem;
+        padding: 0.2rem 0.3rem;
+    }
+    .motto {
+        font-size: 0.8rem;
+    }
+    .slideshow .slide .title {
+        font-size: 20px;
+    }
+    .slideshow .slide .text {
+        font-size: 14px;
+    }
+    .welcome-underline {
+        width: 40%;
+        height: 0.5rem;
+    }
+    .mission {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+    .remarks-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .remarks h4 {
+        text-align: center;
+        margin-top: 2rem;
     }
     .why-us {
         grid-template-columns: 1fr 1fr;
@@ -970,24 +1188,48 @@ footer label {
     .google-maps iframe {
         margin-bottom: 0;
     }
+    /* Contact Page  */
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    .contact-page .fb-page {
+        width: 767px;
+    }
 }
 
 
-/* Large devices (desktops, between 992 and 1200px) */
+/* Small Devices */
 
-@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+/* @media screen and (max-width: 575.98px) { */
+
+@media screen and (max-width: 575.98px) {
     header {
-        grid-template-columns: 9% 41% 50%;
+        display: flex;
+        flex-direction: column;
     }
-    .email {
-        margin-left: 0;
+    .logo {
+        display: none;
     }
-    .phone-number,
-    .email {
-        font-size: 1rem;
+    .contacts {
+        display: none;
+    }
+    .school-name {
+        justify-content: center;
+    }
+    .name {
+        font-size: 2.1rem;
+        text-align: center;
+    }
+    .nav-socials {
+        display: none;
+    }
+    .nav-hamburger-menu {
+        display: none;
     }
     .navigation {
-        margin-top: 1.2rem;
+        margin-top: 0.2rem;
+        justify-content: center;
     }
     .navigation ul li {
         margin-right: 0.1rem;
@@ -996,11 +1238,161 @@ footer label {
         font-size: 1.1rem;
         padding: 0.2rem 0.3rem;
     }
+    .motto {
+        font-size: 0.8rem;
+    }
+    .remarks-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .remarks h4 {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .why-us {
+        grid-template-columns: 1fr;
+    }
+    .why-us-heading {
+        grid-column: 1 / span 1;
+    }
+    footer {
+        grid-template-columns: 1fr;
+        padding-bottom: 0;
+    }
+    .contact-form,
+    .footer-contacts {
+        padding: 0.5rem;
+    }
+    .contact-form-details button {
+        padding: 0.3rem;
+    }
+    .google-maps {
+        grid-column: 1;
+    }
+    .google-maps iframe {
+        margin-bottom: 0;
+    }
+    /* Contact Page  */
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    .contact-page .fb-page {
+        width: 575px;
+    }
+}
+
+
+/* Extra small devices */
+
+@media screen and (max-width: 380.98px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .logo {
+        display: none;
+    }
+    .contacts {
+        display: none;
+    }
+    .school-name {
+        justify-content: center;
+    }
+    .name {
+        font-size: 24px;
+    }
+    .navigation {
+        margin-top: 0.6rem;
+        display: none;
+    }
+    .nav-hamburger-menu {
+        display: block;
+    }
+    .navigation ul li {
+        display: block;
+        text-align: center;
+    }
     .nav-socials {
         display: none;
     }
-    .logo {
-        width: 110%;
-        height: auto;
+    .nav-hamburger-menu ul {
+        width: 100%;
+        background-color: rgba(162, 164, 243, 0.2);
+        padding: 0.2rem;
+    }
+    /* slideshow */
+    .btn {
+        font-size: 10px;
+        padding: 3px 2px;
+    }
+    .slideshow .slide .title {
+        font-size: 14px;
+    }
+    .slideshow .slide .text {
+        font-size: 10px;
+    }
+    /* Principal's Welcome */
+    .welcome,
+    .why-us-heading .welcome {
+        font-size: 1.2rem;
+        margin: 2rem auto 0.6rem;
+        opacity: 0.8;
+    }
+    .welcome-underline,
+    .why-us-heading .welcome-underline {
+        width: 50%;
+        height: 0.3rem;
+    }
+    .mission {
+        margin-top: 1rem;
+        font-size: 14px;
+    }
+    .values {
+        font-size: 12px;
+        opacity: 0.5;
+    }
+    */
+    /* Mission */
+    .mission-white {
+        /* text-shadow: 4px 4px 4px #aaa; */
+        margin-top: 3rem;
+        padding: 1rem;
+    }
+    .remarks {}
+    /* Why Us */
+    .why-us {
+        display: flex;
+        flex-direction: column;
+    }
+    .why-us-heading {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    /* Footer */
+    footer {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    .footer-contacts h3,
+    .contact-form h3,
+    .google-maps h3 {
+        text-align: center;
+        margin: 1rem auto;
+    }
+    .contact-details {
+        margin-bottom: 1rem;
+    }
+    .google-maps iframe {
+        margin-bottom: 1rem;
+    }
+    /* Contact Page  */
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    .contact-page .fb-page {
+        width: 328px;
     }
 }

@@ -30,3 +30,13 @@ function sendmsg() {
     //xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send();
 }
+
+function toggleMenu() {
+    var nav = document.getElementsByClassName('navigation')[0];
+
+    if (nav.style.display === 'none') {
+        nav.style.display = 'block';
+    } else {
+        nav.style.display = 'none';
+    }
+}

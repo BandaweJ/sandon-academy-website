@@ -51,10 +51,10 @@
           <div class="contacts">
             <!-- Phone Number -->
             <span class="phone-number">
-              <i class="fa-brands fa-whatsapp"></i> 0788 166 523 / 0773 603 848
-              / 0773 907 325
+              <i class="fa-brands fa-whatsapp"></i>
+              0777 783 648 / 0787 946 228
             </span>
-            
+
             <!-- Email -->
             <span class="email">
               <i class="fa-regular fa-envelope"></i>
@@ -63,6 +63,13 @@
           </div>
           <!-- End Contacts -->
           <!-- Start Nav Buttons -->
+          <div class="nav-hamburger-menu">
+            <ul>
+              <li>
+                <button type="button" onclick="toggleMenu()">&equiv;</button>
+              </li>
+            </ul>
+          </div>
           <div class="navigation">
             <ul class="animate__animated animate__bounce">
               <li>
@@ -99,84 +106,78 @@
       <!-- End Header -->
 
       <!-- Fees Description -->
-      <article>
-              <!-- h3 heading -->
-      <h3 class="welcome animate__animated animate__zoomInDown">
-        Our Fees
-      </h3>
-      <!--  Underline for the welcome heading  -->
-      <div class="welcome-underline"></div>
-      <div class="fees-desc">
-        <p>Sandon Academy offers very affordable fees and the highest quality educational facilities for the students. 
-            We believe in giving all people a chance at the best education standards possible. 
-            This enables all students from different backgrounds to attend school at this Academy.</p>
-<br>
-        <p>The fees are listed below and are payable in the currency stated only.</p>
-            <br>
-            <p>Please do not hesitate to call us in case of any queries.</p>
-            <ul>
-                <li>
-                    <h4>Form 1 to 2</h4>
-                    <p>USD 1600</p>
-                </li>
-                <li>
-                    <h4>Form 3 to 6 (Non Science)</h4>
-                    <p>USD 1600</p>
-                </li>
-                <li>
-                    <h4>Form 3 to 6 (Science)</h4>
-                    <p>USD 1700</p>
-                </li>
-            </ul>
+      <article class="fees">
+        <!-- h3 heading -->
+        <h3 class="welcome animate__animated animate__zoomInDown">Our Fees</h3>
+        <!--  Underline for the welcome heading  -->
+        <div class="welcome-underline"></div>
+        <div class="fees-desc">
+          <p>
+            Sandon Academy offers very affordable fees and the highest quality
+            educational facilities for the students. We believe in giving all
+            people a chance at the best education standards possible. This
+            enables all students from different backgrounds to attend school at
+            this Academy.
+          </p>
+          <br />
+          <p>
+            The fees are listed below and are payable in the currency stated
+            only.
+          </p>
+          <br />
+          <p>Please do not hesitate to call us in case of any queries.</p>
+          <ul>
+            <li>
+              <h4>Form 1 to 2</h4>
+              <p>USD 1600</p>
+            </li>
+            <li>
+              <h4>Form 3 to 6 (Non Science)</h4>
+              <p>USD 1600</p>
+            </li>
+            <li>
+              <h4>Form 3 to 6 (Science)</h4>
+              <p>USD 1700</p>
+            </li>
+          </ul>
 
-                          <h3 class="welcome animate__animated animate__zoomInDown">
-        Banking Details
-      </h3>
-      <!--  Underline for the welcome heading  -->
-      <div class="welcome-underline"></div>
-      <ul>
-        <li>Bank CBZ
+          <h3 class="welcome animate__animated animate__zoomInDown">
+            Banking Details
+          </h3>
+          <!--  Underline for the welcome heading  -->
+          <div class="welcome-underline"></div>
+          <ul>
+            <li>Bank CBZ</li>
+            <li>Branch Gutu</li>
+            <li>Account Number 61360875780035</li>
+          </ul>
 
-</li>
-<li>
-Branch Gutu
-</li>
-<li>
-Account Number 61360875780035
-</li>
-      </ul>
+          <p class="warning">
+            All payments require proof of payments to be emailed or dropped off
+            to the accounts office at the school premises
+          </p>
 
-      <p class="warning">All payments require proof of payments to be emailed or dropped off to the accounts office at the school premises</p>
-        
-    <p class="alternatives">To all our valued parents living abroad, payments can still be made to the school in foreign currency by sending money through the following agents:
-
-
-
-
-</p>
-    <ul>
-        <li>Western Union</li>
-        <li>Money Gram</li>
-        <li>Mukuru</li>
-        <li>World Remit</li>
-    </ul>
-    
-    </div>
-
+          <p class="alternatives">
+            To all our valued parents living abroad, payments can still be made
+            to the school in foreign currency by sending money through the
+            following agents:
+          </p>
+          <ul>
+            <li>Western Union</li>
+            <li>Money Gram</li>
+            <li>Mukuru</li>
+            <li>World Remit</li>
+          </ul>
+        </div>
       </article>
 
       <!--End Fees Description -->
-      
     </main>
-    
-
-
 
     <footer>
       <div class="contact-form">
         <h3>Contact Us</h3>
-        <div class="contact-form-details">
-          
+        <form class="contact-form-details">
           <label>Name</label>
           <input type="text" name="name" id="name" required />
           <label>Email</label>
@@ -187,50 +188,42 @@ Account Number 61360875780035
             id="msg"
             placeholder="Type your message here"
             cols="20"
-            rows="12"
+            rows="4"
             required
           ></textarea>
           <label></label>
-          <button type="button" id="sendmsg" onclick="sendMessage()">Send Message <span class="tick">&#10004;</span></button>
-        </div>
+          <button type="submit" id="sendmsg" onclick="sendMessage()">
+            Send Message
+          </button>
+        </form>
       </div>
       <div class="footer-contacts">
         <h3>Contact Details</h3>
         <div class="contact-details">
           <label>Cell</label>
-          <p>0788 166 523 / 0773 603 848 / 0773 907 325</p>
+          <p>0777 783 648 / 0787 946 228</p>
           <label>Email</label>
           <p>sandonacademyinfo@gmail.com</p>
           <label>Address</label>
           <p>Sandon Academy <br />P. O Box 97<br />Gutu</p>
         </div>
         <div class="social-media-icons">
-          <a href="#" target="_blank"
+          <a href="https://www.facebook.com/sandonacademyzw" target="_blank"
             ><i class="fa-brands fa-facebook"></i
           ></a>
-          <a href="#" target="_blank"
-            ><i class="fa-brands fa-twitter"></i
-          ></a>
-          <a href="#" target="_blank"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
+          <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         </div>
       </div>
-      
+
       <div class="google-maps">
         <h3>Our Location</h3>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939.878599980814!2d31.082680429225025!3d-19.56245083548329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1932cd642289da79%3A0x6f70dd350ac884d9!2sSandon%20Academy!5e0!3m2!1sen!2szw!4v1580456882652!5m2!1sen!2szw"
-          frameborder="0"
-          style="border: 0"
-          class="mx-auto d-block w-100"
         ></iframe>
-        <div class="social-media-icons">
-         
       </div>
-      
     </footer>
-<div class="copyright">Developed by Sandon Academy &copy; 2018</div>
+    <div class="copyright">Developed by Sandon Academy &copy; 2018</div>
     <!-- End Footer -->
 
     <!-- JS Script -->
