@@ -1,5 +1,5 @@
 function sendmsg() {
-    var sendBtn = document.getElementById('sendmsg');
+    var sendBtn = document.getElementById('sendMsg');
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;
     var msg = document.getElementById('msg').value;
@@ -11,7 +11,7 @@ function sendmsg() {
     //msgObj.subject = subj;
     var msgJSON = JSON.stringify(msgObj);
     //alert(msgJSON);
-    xmlhttp = new XMLHttpRequest();
+    var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             if (this.responseText == 'y') {
@@ -26,7 +26,7 @@ function sendmsg() {
             }
         }
     };
-    xmlhttp.open('GET', './msg.php?q=' + msgJSON, true);
+    xmlhttp.open('GEt', './msg.php?q=' + msgJSON, true);
     //xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send();
 }

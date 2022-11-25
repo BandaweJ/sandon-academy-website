@@ -874,11 +874,16 @@ footer label {
 
 .curriculum th,
 .curriculum td {
-    width: 50%;
+    /* width: 50%; */
     /* border-collapse: collapse; */
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+}
+
+.curriculum th,
+.curriculum td {
+    width: 33%;
 }
 
 .curriculum table thead,
@@ -931,11 +936,32 @@ footer label {
 }
 
 .application-form fieldset {
-    margin: 1rem auto;
+    margin: 2rem auto;
     padding: 1rem;
     border: 1px solid #ddd;
     box-shadow: 0px 0px 3px #777;
     /* color: #277bc0; */
+}
+
+fieldset {
+    /* border: 1px solid #5c331a; */
+    border-top: 20px solid #5c331a;
+    border-bottom: 10px solid #5c331a;
+    background: #faf3e6;
+    margin-top: 3rem;
+}
+
+fieldset legend {
+    text-transform: capitalize;
+    font-variant: small-caps;
+    background: #5c331a;
+    color: #fff;
+    position: relative;
+    top: -9px;
+    left: 0px;
+    padding: 5px 20px;
+    font-size: 24px;
+    border-radius: 8px 8px 0 0;
 }
 
 .application-form .personal-details,
@@ -1395,3 +1421,10 @@ footer label {
         width: 328px;
     }
 }
+
+
+/* $color1: #faf3e6;
+$color2: #5C331A;
+$color3: #aa8;
+$color4: #000;
+$color5: #fff; */
